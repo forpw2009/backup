@@ -1,6 +1,5 @@
-# backup
+# backup - don't fork~
 
-don't fork~
 
 只是搬运和同步更新大佬脚本
 
