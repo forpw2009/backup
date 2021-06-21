@@ -26,10 +26,6 @@ let linkId = 'YhCkrVusBVa_O2K-7xE6hA';
 //默认大于0.3提现   需要调整添加参数  export JD_RED_PACKET_VAL=0.5 自用0.5 一般到手0.64大于0.64容易没
 let redPacketVal = 0.3;
 let rewardValue = 0;
-let txId = 0;
-let poolBaseId = 0;
-let prizeGroupId = 0;
-let prizeBaseId = 0;
 let taskStatus = true;
 let allMessage = '';
 $.cookie = '';
@@ -179,12 +175,8 @@ function takePostRequest(functionId){
                         if (data.code === 0) {
                             if ('gambleObtainReward' === functionId){
                                 console.log(`gambleObtainReward  : ${JSON.stringify(data)}\n`);
-                                txId = data.data.id;
-                                poolBaseId = data.data.poolBaseId;
-                                prizeGroupId = data.data.prizeGroupId;
-                                prizeBaseId = data.data.prizeBaseId;
                                 await $.wait(2000)
-                                await apCashWithDraw(txId, poolBaseId,prizeGroupId, prizeBaseId);
+                                await apCashWithDraw(data.data.id, data.data.poolBaseId,data.data.prizeGroupId, data.data.prizeBaseId);
                             }else {
                                 rewardValue = data.data.rewardValue;
                                 console.log('红包金额：' + rewardValue + ' \n');
@@ -312,12 +304,8 @@ function gamblePrizeList() {
                             for (let i = 0; i < data.data.items.length; i++) {
                                 console.log(`${JSON.stringify(data.data.items[i])}`)
                                 if (data.data.items[i].state === 0) {
-                                    txId = data.data.items[i].id;
-                                    poolBaseId = data.data.items[i].poolBaseId;
-                                    prizeGroupId = data.data.items[i].prizeGroupId;
-                                    prizeBaseId = data.data.items[i].prizeBaseId;
                                     await $.wait(2000)
-                                    await apCashWithDraw(txId, poolBaseId, prizeGroupId, prizeBaseId);
+                                    await apCashWithDraw(data.data.items[i].id, data.data.items[i].poolBaseId, data.data.items[i].prizeGroupId, data.data.items[i].prizeBaseId);
                                 }
                             }
                         } else {
