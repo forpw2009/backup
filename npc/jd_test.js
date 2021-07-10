@@ -51,7 +51,7 @@ function goodMorning() {
                  'Accept-Encoding': 'gzip, deflate, br',
                  'User-Agent': ua,
                  'Accept-Language': 'zh-Hans-CN;q=1',
-                 'Host': 'api.m.jd.com'
+                 'Host': 'sq.jd.com'
              },
          }, (err, resp, data) => {
              try {
