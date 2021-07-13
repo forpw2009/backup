@@ -112,9 +112,9 @@ $.appId = 10028;
       console.log(`\n助力作者\n`);
       for (let id of $.strGroupIds) {
         console.log(`账号${$.UserName} 去助力 ${id}`)
-        await helpByStage(id)
+        // await helpByStage(id)
         if (!$.canHelp) break
-        await $.wait(3000)
+        //await $.wait(3000)
       }
     }
   }
