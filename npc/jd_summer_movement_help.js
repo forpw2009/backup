@@ -23,7 +23,7 @@ if ($.isNode() && process.env.summer_movement_ShHelpFlag) {
   summer_movement_ShHelpFlag = process.env.summer_movement_ShHelpFlag;
 }
 
-const ShHelpAuthorFlag = false;//是否助力作者SH  true 助力，false 不助力
+const ShHelpAuthorFlag = true;//是否助力作者SH  true 助力，false 不助力
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [];
 $.cookie = '';
@@ -90,13 +90,13 @@ function randomString(e) {
   let res = [], res2 = [];
   $.ShInviteLists = []
   if (ShHelpAuthorFlag) {
-    $.innerShInviteList = await getAuthorShareCode('https://raw.githubusercontent.com/smiek2221/updateTeam/master/shareCodes/summer_movement_one.json');
-    res2 = await getAuthorShareCode('https://raw.githubusercontent.com/smiek2221/updateTeam/master/shareCodes/summer_movement.json');
+    $.innerShInviteList = await getAuthorShareCode('https://raw.githubusercontent.com/forpw2009/my_scripts/main/js_code/jd/summer_movement.json');
+    res2 = await getAuthorShareCode('https://raw.githubusercontent.com/forpw2009/my_scripts/main/js_code/jd/summer_movement.json');
     if(!$.innerShInviteList[0]){
-      $.innerShInviteList = await getAuthorShareCode('https://ghproxy.com/https://raw.githubusercontent.com/smiek2221/updateTeam/master/shareCodes/summer_movement.json');
+      $.innerShInviteList = await getAuthorShareCode('https://raw.githubusercontent.com/forpw2009/my_scripts/main/js_code/jd/summer_movement.json');
     }
     if(!res2[0]){
-      res2 = await getAuthorShareCode('https://ghproxy.com/https://raw.githubusercontent.com/smiek2221/updateTeam/master/shareCodes/summer_movement.json');
+      res2 = await getAuthorShareCode('https://raw.githubusercontent.com/forpw2009/my_scripts/main/js_code/jd/summer_movement.json');
     }
     $.innerShInviteLists = getRandomArrayElements([...res, ...res2], [...res, ...res2].length);
     $.ShInviteLists.push(...$.ShInviteList,...$.innerShInviteList,...$.innerShInviteLists);
