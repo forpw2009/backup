@@ -56,15 +56,15 @@ message = ""
     return;
   }
   if ($.isNode()) {
-    if (!process.env.guaopencard6 || process.env.guaopencard6 == "true") {
-      console.log('如需执行脚本请设置环境变量[guaopencard6]为"true"')
-      return
-    }
+ //  if (!process.env.guaopencard6 || process.env.guaopencard6 == "true") {
+ //     console.log('如需执行脚本请设置环境变量[guaopencard6]为"true"')
+ //     return
+ //   }
   }
   guaopencard_addSku = process.env.guaopencard_addSku6
-  if (!process.env.guaopencard_addSku6 || process.env.guaopencard_addSku6 == "true") {
-    console.log('如需加购请设置环境变量[guaopencard_addSku6]为"true"')
-  }
+ // if (!process.env.guaopencard_addSku6 || process.env.guaopencard_addSku6 == "true") {
+ //  console.log('如需加购请设置环境变量[guaopencard_addSku6]为"true"')
+ // }
   console.log(`入口:\nhttps://3.cn/-1ie6CsW`)
   for (let i = 0; i < cookiesArr.length; i++) {
     cookie = cookiesArr[i];
