@@ -24,7 +24,7 @@ const $ = new Env('京东赚赚');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
-let helpAuthor=true; // 帮助作者
+let helpAuthor=false; // 帮助作者
 const randomCount = $.isNode() ? 20 : 5;
 let jdNotify = true; // 是否关闭通知，false打开通知推送，true关闭通知推送
 //IOS等用户直接用NobyDa的jd cookie
@@ -39,10 +39,7 @@ if ($.isNode()) {
   cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
 }
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
-const inviteCodes = [
-  `S9KUiH11Mq1bSKBo@S5KkcRh9P9FbRKUygl_UJcg@StvV3SBcQ8Vw@S5KkcEV9ThDGWdWGw0K5u@S5KkcRktN8lyBdEj1kaQMdw@Sa3LolJe5IPhP9aNJQlGD@S5KkcR0pM91aBIhmgxf9bcA@S5KkcREwR_VXRIB78kvRYcg@S5KkcRE8b9QGEIEz0nKRbJw`,
-  `S9KUiH11Mq1bSKBo@S5KkcRh9P9FbRKUygl_UJcg@StvV3SBcQ8Vw@S5KkcEV9ThDGWdWGw0K5u@S5KkcRktN8lyBdEj1kaQMdw@Sa3LolJe5IPhP9aNJQlGD@S5KkcR0pM91aBIhmgxf9bcA@S5KkcREwR_VXRIB78kvRYcg@S5KkcRE8b9QGEIEz0nKRbJw`,
-]
+const inviteCodes = [] ;
 let nowTimes = new Date(new Date().getTime() + new Date().getTimezoneOffset() * 60 * 1000 + 8 * 60 * 60 * 1000);
 !(async () => {
   await requireConfig();
