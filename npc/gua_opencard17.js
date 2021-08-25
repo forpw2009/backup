@@ -47,9 +47,9 @@ if ($.isNode()) {
 }
 let guaopencard_addSku = "false"
 guaopencard_addSku = $.isNode() ? (process.env.guaopencard_addSku17 ? process.env.guaopencard_addSku17 : `${guaopencard_addSku}`) : ($.getdata('guaopencard_addSku17') ? $.getdata('guaopencard_addSku17') : `${guaopencard_addSku}`);
-let guaopencard = "false"
+let guaopencard = "true"
 guaopencard = $.isNode() ? (process.env.guaopencard17 ? process.env.guaopencard17 : `${guaopencard}`) : ($.getdata('guaopencard17') ? $.getdata('guaopencard17') : `${guaopencard}`);
-let guaopencardRun = "false"
+let guaopencardRun = "true"
 guaopencardRun = $.isNode() ? (process.env.guaopencardRun17 ? process.env.guaopencardRun17 : `${guaopencardRun}`) : ($.getdata('guaopencardRun17') ? $.getdata('guaopencardRun17') : `${guaopencardRun}`);
 message = ""
 !(async () => {
