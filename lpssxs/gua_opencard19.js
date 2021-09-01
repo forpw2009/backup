@@ -48,11 +48,11 @@ if ($.isNode()) {
 } else {
   cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
 }
-let guaopencard_addSku = "false"
+let guaopencard_addSku = "true"
 guaopencard_addSku = $.isNode() ? (process.env.guaopencard_addSku19 ? process.env.guaopencard_addSku19 : `${guaopencard_addSku}`) : ($.getdata('guaopencard_addSku19') ? $.getdata('guaopencard_addSku19') : `${guaopencard_addSku}`);
 let guaopencard = "false"
 guaopencard = $.isNode() ? (process.env.guaopencard19 ? process.env.guaopencard19 : `${guaopencard}`) : ($.getdata('guaopencard19') ? $.getdata('guaopencard19') : `${guaopencard}`);
-let guaopencardRun = "false"
+let guaopencardRun = "true"
 guaopencardRun = $.isNode() ? (process.env.guaopencardRun19 ? process.env.guaopencardRun19 : `${guaopencardRun}`) : ($.getdata('guaopencardRun19') ? $.getdata('guaopencardRun19') : `${guaopencardRun}`);
 message = ""
 !(async () => {
