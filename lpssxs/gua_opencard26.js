@@ -25,7 +25,7 @@ All变量适用
 ============Quantumultx===============
 [task_local]
 #9.8-10.8 京粮食品 京秋放价
-27 2 * 9,10 * https://raw.githubusercontent.com/smiek2221/scripts/master/gua_opencard26.js, tag=9.8-10.8 京粮食品 京秋放价, enabled=true
+3 0,5,12,16 * 9,10 * https://raw.githubusercontent.com/smiek2221/scripts/master/gua_opencard26.js, tag=9.8-10.8 京粮食品 京秋放价, enabled=true
 
 ================Loon==============
 [Script]

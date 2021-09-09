@@ -25,7 +25,7 @@ All变量适用
 ============Quantumultx===============
 [task_local]
 #9.9~9.16 大聚惠
-27 1,21 9-16 9 * https://raw.githubusercontent.com/smiek2221/scripts/master/gua_opencard27.js, tag=9.9~9.16 大聚惠, enabled=true
+27 0,1,21 9-16 9 * https://raw.githubusercontent.com/smiek2221/scripts/master/gua_opencard27.js, tag=9.9~9.16 大聚惠, enabled=true
 
 ================Loon==============
 [Script]
