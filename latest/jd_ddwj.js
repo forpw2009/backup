@@ -1,5 +1,5 @@
 /*
-cron 57 9,20 * * * ddwj.js
+cron 1 10,15,20 * * * ddwj.js
 */
 const $ = new Env('东东玩家')
 const notify = $.isNode() ?require('./sendNotify') : '';
