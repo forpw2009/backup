@@ -35,9 +35,9 @@ All变量适用
 47 4 1-12 11 * https://raw.githubusercontent.com/smiek2121/scripts/master/gua_opencard53.js, tag=11.01~11.12 惠聚11.11好物乐享不停, enabled=true
 
 */
-let guaopencard_addSku = "false"
-let guaopencard = "false"
-let guaopenwait = "0"
+let guaopencard_addSku = "true"
+let guaopencard = "true"
+let guaopenwait = "10"
 
 const $ = new Env('11.01~11.12 惠聚11.11好物乐享不停');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
