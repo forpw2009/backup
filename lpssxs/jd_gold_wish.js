@@ -59,7 +59,7 @@ $.shareCodes = [];
             await jdSplit()
         }
     }
-    let res = [""]; //await getAuthorShareCode('')
+    let res = ["T0225KkcRhpL8FXWcxrzxqZYcACjRQmoaX5kRrbA"]; //await getAuthorShareCode('')
     $.newShareCodes = [...new Set([...$.shareCodes, ...(res || [])])]
     for (let i = 0; i < cookiesArr.length; i++) {
         cookie = cookiesArr[i];
